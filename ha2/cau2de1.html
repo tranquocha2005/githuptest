@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12px;
+        border-spacing: 5px; // khoang cach giua cac ô
+      }
+      tr,
+      td {
+        border: 1px solid red;
+        padding: 5px 5px;
+        text-align: center;
+      }
+      .tittle {
+        font-size: 16px;
+        background-color: rgb(18, 20, 20);
+        text-align: center;
+        color: white;
+        text-transform: uppercase; // viet hoa
+      }
+      .stt-left {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="5">
+      <tr>
+        <td class="tittle" colspan="7">kế hoạch đào tạo</td>
+      </tr>
+      <tr>
+        <td rowspan="2">stt</td>
+        <td rowspan="2">ten mon</td>
+        <td colspan="2">số tiết</td>
+        <td rowspan="2">hk1</td>
+        <td rowspan="2">hk2</td>
+        <td rowspan="2">ghi chú</td>
+      </tr>
+      <tr>
+        <td>LT</td>
+        <td>TH</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Chính trị</td>
+        <td>30</td>
+        <td>30</td>
+        <td>X</td>
+        <td></td>
+        <td rowspan="2">2 tuần đầu HK</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Thể dục</td>
+        <td>10</td>
+        <td>30</td>
+        <td></td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Anh Văn</td>
+        <td>90</td>
+        <td>0</td>
+        <td>X</td>
+        <td></td>
+        <td rowspan="3">15 tuần</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Tin học</td>
+        <td>30</td>
+        <td>60</td>
+        <td>X</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="stt-left">5</td>
+        <td>Toán</td>
+        <td>60</td>
+        <td>30</td>
+        <td></td>
+        <td>X</td>
+      </tr>
+    </table>
+  </body>
+</html>
