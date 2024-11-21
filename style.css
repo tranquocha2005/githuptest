@@ -1,0 +1,152 @@
+<style>
+div {
+        box-sizing: border-box;
+        
+    }
+    ul,li{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    *{box-sizing: border-box;}
+    .item{  
+        width: calc(33.3% - 20px);
+        border: solid 3px red;
+        
+        margin: 10px;
+        padding: 0px;
+    }
+    #content{
+    width: calc(60% - 20px);
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    z-index: 1; /* Đặt thấp hơn menu */
+    position: relative;
+}
+
+.item {
+    border: solid 3px red;
+    width: calc(33.3% -10px);
+    margin: 5px;
+    position:relative;
+    z-index: 3;
+    padding-inline: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+    .iteml{ 
+        border: solid 3px blue;
+        width: 200px;
+        margin: 10px;
+        padding-left: 10px;}
+    .item2{
+        border: solid 3px black;
+        padding-left: 10px;
+        padding-block: 10px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    }    
+    .item3 ul li{
+        display: inline-block; 
+        background-color: white;
+        border: solid 2px red;
+        padding:10px;
+        margin: 5px;
+    }
+    #nextt {
+        width: 100%;
+        background-color: aquamarine;
+        border: 5px solid bisque;
+        margin-bottom: 5px;
+       
+    }
+    hr {
+        border : 3px solid black;
+        width: 100%;
+        margin: 0 auto;
+        
+
+    }
+    .item img{
+        max-width: 100%;
+        height:auto;
+        border: 5px solid blue;
+        border-radius: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: red;
+        background-color: chartreuse; 
+    }
+    /* Đảm bảo các item con hiển thị đúng */
+    #topmenu {
+list-style-type: none;
+display: flex;
+justify-content: center; /* Canh giữa toàn bộ thanh điều hướng */
+padding: 0;
+margin: 0;
+z-index: 100; /* Đặt độ ưu tiên cao hơn nội dung */
+background-color: white;
+position: relative;
+
+}
+
+#topmenu .item {
+display: inline-block;
+padding: 5px; /* Chỉnh khoảng cách trong liên kết */
+margin: 5px;
+border: 2px solid red; /* Viền đỏ như trong hình */
+text-align: center;
+position: relative;
+}
+
+#topmenu a {
+text-decoration: none;
+color: black;
+font-size: 16px;
+}
+
+#topmenu a:hover {
+color: red;
+background-color: chartreuse;
+}
+
+#topmenu li ul {
+display: none;
+position: absolute;
+top: 100%; 
+left: 0;
+z-index: 200; /* Đặt độ ưu tiên cao hơn */
+background-color: white; /* Đảm bảo menu con có nền */
+border: 2px solid red; /* Thêm viền cho khung bao quanh */
+padding: 2px 0px; /* Thêm khoảng cách giữa các item và khung */
+}
+#topmenu li:hover > ul {
+display: block;
+
+}
+
+#topmenu li ul li {
+width: 200px; /* Đặt chiều rộng cho menu con */
+background-color: aqua;
+border: 2px solid black;
+text-align: left;
+z-index: 200; /* Đảm bảo menu con luôn nổi trên */
+padding: 10px 10px;
+margin-bottom: 10px; /* Khoảng cách giữa các mục menu con */
+
+border-radius: 10px; /* Bo góc nhẹ cho menu con */
+}
+    .item li {
+    display: inline-block;background-color: white;border: solid 2px red;padding:10px;margin: 5px;
+}
+.clickable {
+    cursor: pointer; /* Đặt con trỏ chuột thành pointer khi hover */
+}
+
+</style>

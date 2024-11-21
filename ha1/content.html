@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #abc {
+      color: aliceblue;
+      height: 600px;
+      width: 100%;
+      position: relative;
+      background-color: rgb(31, 31, 30);
+    }
+  </style>
+  <body>
+    <div>
+      <div id="abc">
+        <div style="height: 150px; text-align: center">
+          <div style="padding-top: 80px; font-size: 40px">
+            <strong>Cart</strong>
+          </div>
+        </div>
+        <div>
+          <div
+            style="
+              height: calc(300px - 1px); /* trừ đi chiều cao của border */
+              width: calc(65% - 1px); /* trừ đi chiều rộng của border */
+              position: absolute;
+              top: 152px;
+              left: 0;
+            "
+          >
+            <div style="display: flex; margin-top: 55px; font-size: 20px">
+              <div style="margin-left: 50px"><strong>Product</strong></div>
+              <div style="margin-left: 430px"><strong>Quantity</strong></div>
+              <div style="margin-right: 25px; margin-left: auto">
+                <strong>Total</strong>
+              </div>
+            </div>
+            <hr
+              style="
+                border: none;
+                border-bottom: 1px solid rgb(65, 60, 60);
+                margin: 20px 0 0 50px;
+                width: calc(100% - 75px);
+              "
+            />
+          </div>
+          <div
+            style="
+              height: calc(330px - 1px); /* trừ đi chiều cao của border */
+              width: calc(35% - 1px); /* trừ đi chiều rộng của border */
+              position: absolute;
+              top: 152px;
+              right: 0;
+            "
+          >
+            <div
+              style="
+                border: solid 1px rgb(65, 60, 60);
+                height: calc(
+                  100% - 60px
+                ); /* Giảm chiều cao để có khoảng cách 25px */
+                width: calc(
+                  100% - 75px
+                ); /* Giảm chiều rộng để có khoảng cách 25px */
+                position: absolute;
+                top: 50%;
+                left: 25px;
+                transform: translateY(-50%);
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  margin-top: 40px;
+                  font-size: 20px;
+                "
+              >
+                <div>Subtotal</div>
+                <div>$30.00</div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  margin-top: 15px;
+                  font-size: 20px;
+                "
+              >
+                <div>Total</div>
+                <div>$30.00 USD</div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  margin-top: 10px;
+                  font-size: 17px;
+                "
+              >
+                Tax included and shipping calculated at checkout
+              </div>
+              <div
+                style="
+                  border: solid 2px rgb(44, 228, 59);
+                  margin-top: 10px;
+                  padding: 15px;
+                  text-align: center;
+                  background-color: rgb(44, 228, 59);
+                  font-weight: bold;
+                  cursor: pointer;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  margin-top: 25px;
+                "
+              >
+                CHECKOUT
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
