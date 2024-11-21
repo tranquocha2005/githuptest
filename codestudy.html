@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <title>Div</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div style="border: solid 5px black; width: 100%">
+      <div
+        style="
+          background-color: olive;
+          border: solid 3px gold;
+          text-align: center;
+          height: 150px;
+          line-height: 150px;
+        "
+      >
+        Header
+      </div>
+      <div style="border: solid 3px blue">
+        <ul>
+          <li style="display: inline; border: 2px solid red">Trang chủ</li>
+          <li style="display: inline; border: 2px solid red">
+            Thông tin tuyển sinh
+          </li>
+          <li style="display: inline; border: 2px solid red">
+            Thông tin đào tạo
+          </li>
+          <li style="display: inline; border: 2px solid red">Liên hệ</li>
+        </ul>
+        <ul>
+          <li style="display: block; border: 2px solid red">Trang chủ</li>
+          <li style="display: block; border: 2px solid red">
+            Thông tin tuyển sinh
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li style="display: block; border: 2px solid red">
+            Thông tin đào tạo
+          </li>
+          <li style="display: block; border: 2px solid red">Liên hệ</li>
+        </ul>
+      </div>
+      <div>
+        <div
+          style="
+            background-color: aqua;
+            float: left;
+            width: 20%;
+            border: solid 3px lime;
+          "
+        >
+          <div
+            style="
+              border: solid 3px gray;
+              padding-left: 10px;
+              margin-top: 10px;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-bottom: 2px;
+            "
+          >
+            Trang chủ
+          </div>
+          <div
+            style="
+              border: solid 3px gray;
+              padding-left: 10px;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+            "
+          >
+            Thông tin tuyển sinh
+          </div>
+          <div
+            style="
+              border: solid 3px gray;
+              padding-left: 10px;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+            "
+          >
+            Thông tin đào tạo
+          </div>
+          <div
+            style="
+              border: solid 3px gray;
+              padding-left: 10px;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+            "
+          >
+            Giới thiệu
+          </div>
+          <div
+            style="
+              border: solid 3px gray;
+              padding-left: 10px;
+              margin-bottom: 10px;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 2px;
+            "
+          >
+            Liên hệ
+          </div>
+        </div>
+        <div
+          style="
+            background-color: rgb(238, 233, 233);
+            float: left;
+            width: 60%;
+            border: solid 3px lime;
+          "
+        >
+          Content
+        </div>
+        <div
+          style="
+            background-color: grey;
+            float: left;
+            width: 20%;
+            border: solid 3px lime;
+          "
+        >
+          Right menu
+        </div>
+      </div>
+      <div
+        style="
+          clear: both;
+          background-color: azure;
+          border: solid 3px orange;
+          height: 150px;
+        "
+      >
+        Footer
+      </div>
+    </div>
+  </body>
+</html>
