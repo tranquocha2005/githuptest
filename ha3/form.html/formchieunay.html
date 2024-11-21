@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phiếu Đặt Phòng</title>
+    <style>
+      .form {
+        height: 100vh;
+        border: solid 2px red;
+        position: relative;
+      }
+      .form1 {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 2px black;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 160px;
+        padding-bottom: 15px;
+      }
+      h1 {
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      function cau1() {
+        const hoten = document.getElementById("txtHoten").value;
+        const cmnd = document.getElementById("txtcmnd").value;
+        if (hoten.trim() === "") {
+          alert("Họ tên không được trống");
+          document.getElementById("txtHoten").focus();
+          return false;
+        }
+        if (cmnd.trim() === "") {
+          alert("Số CMND không được rỗng");
+          document.getElementById("txtcmnd").focus();
+          return false;
+        }
+        if (isNaN(cmnd)) {
+          alert("Số CMND phải là số");
+          document.getElementById("txtcmnd").focus();
+          return false;
+        }
+        return true;
+      }
+
+      function kiemtraluachon() {
+        const mucgia = document.getElementById("cboMucgia").value;
+        const ansang = document.getElementById("chkAnsang");
+        if (mucgia === "b" || mucgia === "c") {
+          ansang.checked = true;
+        } else {
+          ansang.checked = false;
+        }
+      }
+      function tinhdongia() {
+        const ngaythue = document.getElementById("dateNgaythue").value;
+        const ngaytra = document.getElementById("dateNgaytra").value;
+        const mucgia = document.getElementById("cboMucgia").value;
+        const ansang = document.getElementById("chkAnsang").checked;
+        const giatui = document.getElementById("chkGiatui").checked;
+        const baobuoisang = document.getElementById("chkBaobuoisang").checked;
+
+        let mucGiaTheoLoai = 0;
+        if (mucgia === "a") {
+          mucGiaTheoLoai = 150000;
+        } else if (mucgia === "b") {
+          mucGiaTheoLoai = 300000;
+        } else if (mucgia === "c") {
+          mucGiaTheoLoai = 500000;
+        }
+        let dongia = 0;
+        if (!ngaythue || !ngaytra || ngaythue == ngaytra) {
+          dongia = mucGiaTheoLoai;
+        } else {
+          const datengaythue = new Date(ngaythue);
+
+          const datengaytra = new Date(ngaytra);
+          if (datengaytra < datengaythue) {
+            alert("ngay tra phai lon hon ngay thue");
+            return;
+          } else {
+            const songaythue =
+              (datengaytra - datengaythue) / (1000 * 60 * 60 * 24);
+
+            dongia = songaythue * mucGiaTheoLoai;
+          }
+        }
+        let phiDichVu = 0;
+        if (ansang && mucgia === "a") phiDichVu += mucGiaTheoLoai * 0.05;
+        if (giatui) phiDichVu += mucGiaTheoLoai * 0.05;
+        if (baobuoisang) phiDichVu += mucGiaTheoLoai * 0.05;
+
+        const tinhdongia = phiDichVu + dongia;
+        document.getElementById("txtTienthuephong").value =
+          tinhdongia.toFixed(0);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="form">
+      <div class="form1">
+        <form name="frmPhieudatphong" onsubmit="return cau1()">
+          <h1>PHIẾU ĐẶT PHÒNG</h1>
+          <label for="txtHoten">Họ Tên *</label><br />
+          <input type="text" id="txtHoten" name="txtHoten" /><br /><br />
+          <label for="txtDiachi">Địa chỉ</label><br />
+          <input type="text" id="txtDiachi" name="txtDiachi" /><br /><br />
+          <label for="txtcmnd">Số chứng minh nhân dân*</label><br />
+          <input type="text" id="txtcmnd" name="txtcmnd" /><br /><br />
+
+          <label for="cboMucgia">Mức giá</label>
+          <select name="cboMucgia" id="cboMucgia" onclick="kiemtraluachon()">
+            <option value="a" selected>Loại thường</option>
+            <option value="b">Loại sang</option>
+            <option value="c">Loại đặc biệt</option>
+          </select>
+          <br /><br />
+
+          <div style="display: flex; align-items: center">
+            <label for="dateNgaythue">Ngày thuê</label>
+            <input type="date" id="dateNgaythue" name="dateNgaythue" />
+            <div style="margin-left: 50px">
+              <label for="dateNgaytra">Ngày trả</label>
+              <input type="date" id="dateNgaytra" name="dateNgaytra" />
+            </div>
+          </div>
+          <br />
+
+          <label for="">Dịch vụ đi kèm</label><br />
+          <label for="chkAnsang">Ăn sáng</label>
+          <input type="checkbox" id="chkAnsang" name="chkAnsang" /><br />
+          <label for="chkBaobuoisang">Báo buổi sáng</label>
+          <input
+            type="checkbox"
+            id="chkBaobuoisang"
+            name="chkBaobuoisang"
+          /><br />
+          <label for="chkGiatui">Giặt ủi</label>
+          <input type="checkbox" name="chkGiatui" id="chkGiatui" /><br /><br />
+
+          <label for="txtTienthuephong">Tiền thuê phòng</label><br />
+          <input
+            type="text"
+            id="txtTienthuephong"
+            name="txtTienthuephong"
+            readonly
+          />
+          VND<br /><br />
+
+          <button
+            type="button"
+            name="btnTinhdongia"
+            id="btnTinhdongia"
+            onclick="tinhdongia()"
+          >
+            Tính đơn giá
+          </button>
+          <button type="submit" name="subDangky" id="subDangky">Đăng Kí</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

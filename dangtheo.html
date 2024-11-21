@@ -1,0 +1,481 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hehe</title>
+        <link rel="stylesheet" href="style.css">
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <script>   
+        function thaydoinoidung(){
+            document.getElementById("content").innerHTML = '<p style=" border: solid 3px black; background-color: lightyellow; padding: 10px;">Nội dung đã thay đổi</p>';
+
+            }
+        function thaydoinoiidung1()
+        {
+            document.getElementById("content").innerHTML = '<p style=" border: solid 3px black; background-color: lightyellow; padding: 10px;"> đã thay đổi</p>';
+        }
+        function chuyennganh(obj)    
+        {
+            alert("ban dang chon: " +obj.id);
+            switch(obj.id){
+                case "ktpm" :
+                    document.getElementById("content").innerHTML="<p>ban dang chon ktpm</p>";
+                    break;
+                    case "khnt" :
+                    document.getElementById("content").innerHTML="<p>ban dang chon hkmt</p>";
+                    break;
+                    case "httt" :
+                    document.getElementById("content").innerHTML="<p>ban dang chon httt</p>";
+                    break;    
+
+
+            }
+            
+        }
+        function thaydoinoidung2() {
+    document.getElementById("content").innerHTML = `
+        <div class="item">
+            <div>Ma SP 1</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Ten SP 1</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Gia SP 1</div>
+            <hr style="margin-bottom: 10px;">
+            <div class="item3">
+                <ul>
+                    <li><a href="#">Mua</a></li>
+                    <li><a href="#">Chi tiết</a></li>
+                </ul>
+            </div>
+            <hr style="margin-bottom: 10px;">
+        </div>
+        
+        <div class="item">
+            <div>Ma SP 2</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Ten SP 2</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Gia SP 2</div>
+            <hr style="margin-bottom: 10px;">
+            <div class="item3">
+                <ul>
+                    <li><a href="#">Mua</a></li>
+                    <li><a href="#">Chi tiết</a></li>
+                </ul>
+            </div>
+            <hr style="margin-bottom: 10px;">
+        </div>
+        
+        <div class="item">
+            <div>Ma SP 3</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Ten SP 3</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Gia SP 3</div>
+            <hr style="margin-bottom: 10px;">
+            <div class="item3">
+                <ul>
+                    <li><a href="#">Mua</a></li>
+                    <li><a href="#">Chi tiết</a></li>
+                </ul>
+            </div>
+            <hr style="margin-bottom: 10px;">
+        </div>
+        
+        <div class="item">
+            <div>Ma SP 4</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Ten SP 4</div>
+            <hr style="margin-bottom: 10px;">
+            <div>Gia SP 4</div>
+            <hr style="margin-bottom: 10px;">
+            <div class="item3">
+                <ul>
+                    <li><a href="#">Mua</a></li>
+                    <li><a href="#">Chi tiết</a></li>
+                </ul>
+            </div>
+            <hr style="margin-bottom: 10px;">
+        </div>
+    `;
+}
+        window.onload = function(e){
+            hienthimenu();
+        }
+        function hienthimenu()
+        {
+            var url=window.location.href;
+            var bien= url.split("?");
+            console.log(bien);
+            alert(bien[1]);
+            switch (bien[1])
+            {
+                case "tc":
+                    document.getElementById("content").innerText="ban dang chon trang chu";
+                    break;
+                 case "lh":
+                 document.getElementById("content").innerText="ban dang chon lien he";
+                 break;
+            }
+        }   
+        function dangnhap() {
+            document.body.innerHTML = `
+            <div style="position: relative; background-color: br  own; min-height: 600px">
+      <div
+        style="padding-left: 440px; padding-top: 150px; padding-right: 440px"
+      >
+        <div
+          style="
+            border: solid 2px rgb(102, 228, 123));
+            height: 40px;
+            text-align: left;
+            padding-left: 20px;
+            padding-top:3px;
+            padding-bottom: 5px;
+            background-color: rgb(102, 228, 123);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+          "
+        >
+          Đăng Kí
+          <i
+            class="fas fa-times"
+            style="
+              font-size: 25px;
+              color: red;
+              margin-left: 350px;
+              
+              background-color: rgb(39, 15, 15); /* Màu nền của khung */
+              border: solid 3px rgb(10, 10, 10); /* Viền xung quanh */
+
+              cursor: pointer; /* Thay đổi con trỏ khi hover */
+            "
+          ></i>
+        </div>
+
+        <div style="display: flex; height: 250px">
+          <div
+            style="
+              border: 1px blue;
+              width: 50%;
+              background-color: rgb(102, 228, 123);
+            "
+          >
+            <div style="margin-top: 5px; margin-left: 10px">Họ Và Tên</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập họ và tên "
+                style="
+                  border: solid 2px red;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+            <div style="margin-top: 5px; margin-left: 10px">Địa chỉ</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập địa chỉ "
+                style="
+                  border: solid 2px red;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+            <div style="margin-top: 5px; margin-left: 10px">Điện thoại</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập điện thoại "
+                style="
+                  border: solid 2px red;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+            <div style="margin-top: 5px; margin-left: 10px">Giới Tính</div>
+
+            <div style="display: flex; margin-left: 20px; margin-top: 1px">
+              <input type="radio" name="gender" value="male" /> Nam
+
+              <input type="radio" name="gender" value="male" /> nữ
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px blue;
+              width: 50%;
+              background-color: aqua;
+              text-align: center;
+            "
+          >
+            <div style="margin-top: 5px; margin-left: 10px">Tên đăng nhập</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập tên đăng nhập"
+                style="
+                  border: solid 2px red;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+            <div style="margin-top: 5px; margin-left: 10px">Mật khẩu</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập mật khẩu"
+                style="
+                  border: solid 2px red;
+                  border-radius: 10px;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+            <div style="margin-top: 5px; margin-left: 10px">Mật khẩu lại</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nhập lại mật khẩu "
+                style="
+                  border: solid 2px red;
+                  border-radius: 10px;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            background-color: aqua;
+            padding: 0px;
+            justify-content: center; /* Căn giữa các ô nhỏ */
+          "
+        >
+          <div
+            style="
+              border: solid 1px red;
+              border-radius: 10px; /* Đã làm tròn góc */
+              padding: 10px 15px;
+              margin: 0 10px; /* Tạo khoảng cách đều giữa các ô */
+              background-color: lightblue;
+            "
+          >
+            đăng kí
+          </div>
+          <div
+            style="
+              border: solid 1px red;
+              border-radius: 10px;
+              padding: 10px 15px;
+              margin: 0 10px; /* Tạo khoảng cách đều giữa các ô */
+              background-color: lightblue;
+            "
+          >
+            thay đổi giá trị
+          </div>
+          <div
+            style="
+              border: solid 1px red;
+              border-radius: 10px;
+              padding: 10px 15px;
+              margin: 0px 10px; /* Tạo khoảng cách đều giữa các ô */
+              background-color: lightblue;
+            "
+          >
+            thay đổi vị trí
+          </div>
+        </div>
+      </div>
+    </div>
+            
+                `;
+        }
+        
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <div style="border: 5px red; position: relative;">
+                <div style="width: 100%; height: 150px; background-color: aquamarine; border: 5px solid bisque; margin-bottom: 5px; position: relative;">
+                    <div style="position: absolute;"><div style="border: 2px solid rgb(207, 38, 38);margin-left: 120px;padding: 5px 5px;">Thông Tin công ty</div></div>
+                    <div style="border: 2px solid black; position: absolute; bottom: 10px; right: 10px;display: flex;">  
+                        <div class="clickable" style="border: 2px solid  rgb(207, 38, 38); padding: 5px;margin: 2px 2px; "><a href="#" onclick="dangnhap();">đăng nhập</a></div>
+                        <div style="border: 2px solid rgb(207, 45, 45); padding: 5px;margin: 2px 2px;">đăng Kí</div>
+                        <div style="border: 2px solid rgb(207, 45, 45); padding: 5px;margin: 2px 2px;">giỏ hàng</div>
+                    </div>
+                </div>
+            </div>
+    </div>  
+    <div >
+        <div id="nextt" >
+            <ul id="topmenu">
+            <li class="item" onclick="thaydoinoidung();"><a href="#layout_huongdan.html?tc">trang chủ</a></li>
+            <li class="item" onclick="thaydoinoiidung1();"><a href="#layout_huongdan.html?gtt">Thông tin tuyển sinh</a></li>
+                <li class="item" ><a href="#">chương trình đào tạo</a>
+                <ul>
+                    <li id="ktpm" onclick="chuyennganh(this)">ngành kĩ thuật phần mềm</li>
+                    <li id="khnt" onclick="chuyennganh(this)">ngành khoa học máy tinh</li>
+                    <li id="httt" onclick="chuyennganh(this)">ngành hệ thống thông tin</li>
+                </ul>
+                </li>
+                <li class="item" onclick="thaydoinoidung2();"><a href="#layout_huongdan.html?tchon">sản phẩm</a></li>
+                <li class="item" onclick="thaydoinoidung();"><a href="#layout_huongdan.html?tchon">liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div style="border: solid 5px bisque;margin-bottom: 5px;overflow: hidden;">
+            <div style="padding: 10px;border: solid 2px rgb(18, 235, 162);float: left;width: 20%;">
+                <div class="item2" >
+                    <a href="#">Trang chủ</a>
+                </div>
+                <div class="item2">
+                    <a href="#">Sản Phẩm</a>
+                </div>
+                <div class="item2">
+                    <a href="#">Đánh giá</a>
+                </div>
+                <div class="item2">
+                    <a href="#">Liên Hệ</a>
+                </div>
+            </div>
+                <div style="float: left; width: 60%;border: solid 2px rgb(44, 46, 41);z-index: 3;position: relative;">
+                            <div id="content" style="width: 100%; border: solid 2px black;padding: 0 0 ;">
+
+                                <div class="item" >
+                                  <div><img src="../ha2/xedepp.png" alt=""></div>
+                                  <div></div>
+
+                          
+                                    <div>Ma SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Ten SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Gia SP</div>
+                                    <hr style="margin-bottom: 10px;">
+            
+                                    <div class="item3">
+                                        <ul>
+                                            <li ><a href="#">Mua</a></li>
+                                            <li ><a href="#">Chi tiết</a></li>
+                                        </ul>
+                                        
+                                    </div>
+            
+            
+                                    <hr style="margin-bottom: 10px;">
+                                </div>
+            
+            
+            
+                                <div class="item" >
+                                    
+                                  
+                                    <div>Ma SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Ten SP</div>
+                                    <hr style="margin-bottom: 1 0px;">
+                                    <div>Gia SP</div>
+                                    <hr style="margin-bottom: 10px;">
+            
+                                    <div class="item3">
+                                        <ul>
+                                            <li ><a href="#">Mua</a></li>
+                                            <li ><a href="#">Chi tiết</a></li>
+                                        </ul>
+                                        
+                                    </div>
+            
+                                    <hr style="margin-bottom: 10px;">
+                                </div>
+            
+            
+                                <div class="item" >
+                                    
+                                    
+                                    <div>Ma SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Ten SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Gia SP</div>
+                                    <hr style="margin-bottom: 10px;">
+            
+                                    <div class="item3">
+                                        <ul>
+                                            <li ><a href="#">Mua</a></li>
+                                            <li ><a href="#">Chi tiết</a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                    
+            
+                                    <hr style="margin-bottom: 10px;">
+                                    
+                                </div>
+                                <div class="item">
+                                   
+                                    <div>Ma SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Ten SP</div>
+                                    <hr style="margin-bottom: 10px;">
+                                    <div>Gia SP</div>
+                                    <hr style="margin-bottom: 10px;">
+            
+                                    <div class="item3">
+                                        <ul>
+                                            <li ><a href="#">Mua</a></li>
+                                            <li ><a href="#">Chi tiết</a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                    
+            
+                                    <hr style="margin-bottom: 10px;">
+                                    
+                                </div>
+            
+            
+                                
+                                <div style="clear: both;"></div>
+                            </div>
+                            
+                            </div>
+                            <div style="padding: 10px; border: solid 2px greenyellow; float: left; width: 20%;">right</div>
+                        <div style="clear: both;"></div>
+        </div>
+        
+        
+    </div>
+    <div style="border: solid 5px bisque; height: 150px;background-color: aquamarine;clear: both;">Footer</div>
+        </div>
+    </html>
+
+
